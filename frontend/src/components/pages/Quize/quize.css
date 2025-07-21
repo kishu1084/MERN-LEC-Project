@@ -1,0 +1,194 @@
+/* Button base style */
+.quize-main-container {
+    background-color: #ffffff;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 56%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 3%;
+    border-radius: 8px;
+    border: 2px solid #1c204c;
+    box-shadow: 0px 0px 8px #292f70;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    
+    height: 100vh;
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1c204c;
+    background-size: 300% 300%;
+    /* animation: gradient-animation 6s ease infinite; 
+    background-image: linear-gradient(-45deg,#dadcf1, #ffffff,#c6caf4);     */
+}
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1c204c; /* Default text color */
+    display: inline-block;
+}
+
+
+.app-title, h1 {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+ 
+.quize-container {
+    width: 100%;
+    min-height: 100%;
+    color: #2a2f6a;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 8px #292f70;
+} 
+.question-preview-btn {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    transition: all 0s ease-in-out;
+}
+
+
+.submit-btn, .close-btn {
+    padding: 3px 15px;
+    font-size: 17px;
+    background-color: #1c204c !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    border: 2px solid #1c204c !important;
+    margin-top: 15px;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    box-shadow: inset 0px 0px 8px #292f70 !important;
+}
+
+.submit-btn:hover , .close-btn:hover{
+    opacity: 0.9;
+}
+
+.prev-btn, .next-btn {
+    padding: 3px 15px; 
+    font-size: 17px;
+    background-color: #ffffff;
+    color: #1c204c;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    border: 2px solid #1c204c;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.result {
+    margin: 20% 0;
+}
+
+.next-btn{
+    margin: 0 15px;
+}
+
+.answered {
+    background: linear-gradient(135deg, #1c204c, #373f95);
+    color: white;
+    font-weight: bold;
+}
+
+.question-preview-btn.active {
+    border: 2px solid #007bff;
+    background-color: #e7f1ff;
+}
+
+.unvisited {
+    background-color: #dadcf1;
+    color: #1c204c;
+    border: 1px solid #292f70;
+}
+
+.unanswered {
+    background: linear-gradient(135deg, #ff4d4d, #b30000);
+    color: white;
+    font-weight: bold;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+
+/* Hover effect for better user experience */
+.question-preview-btn:hover {
+    opacity: 0.8;
+    background-color: #373f95;
+    transform: scale(1.2);
+}
+
+.status-summary {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.score-btn {
+    padding: 3px 15px;
+    pointer-events: none;
+    font-size: 17px;
+    background-color:   #ffe6e6;
+    color: #b30000;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    border: 1px solid #b30000;
+    margin-top: 15px;
+    
+}
+
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

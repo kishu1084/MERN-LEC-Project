@@ -1,0 +1,567 @@
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+
+/* Navigation Header */
+.nav-header {
+    background: linear-gradient(to right, #c7caea, #8f95d6, #c7caea);
+    height: 30px;
+    width: 100%;
+    position: sticky;
+    top: 0 ;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 13%;
+    box-sizing: border-box;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon-link:hover {
+    color: #1c204c;
+}
+
+/* Main Header */
+.main-header {
+    height: fit-content;
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 13%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 8px #99a0b4;
+}
+
+/* Left Side */
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.l-container img {
+    height: 60px;
+    width: 95px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.logo-name {
+    padding: 0;
+    color: #1c204c;
+    font-size: 20px;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-container:focus-within {
+    width: 350px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 40px 5px 12px;
+    font-size: 18px;
+    border: 2px solid #1c204c;
+    border-radius: 7px;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1c204c;
+    background-image: linear-gradient(white, white),
+                      linear-gradient(to right, #1c204c, #a2a7dd, #1c204c);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+
+.search-input::placeholder {
+    color: #a2a7dd;
+}
+
+.search-input:focus {
+    box-shadow: 0px 0px 8px #292f70;
+    border: 2px solid #ffffff;
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #292f70;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Right Side */
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Button Styles */
+.demo-video-btn, .log-in-btn {
+    padding: 3px 15px;
+    font-size: 17px;
+    background-color: #1c204c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid #1c204c;
+}
+
+.demo-video-btn {
+    background-color: white;
+    color: #1c204c;
+}
+
+.demo-video-btn:hover {
+    box-shadow: 0px -5px 10px #ecedf8, 0px 5px 10px #ecedf8;
+}
+
+.log-in-btn:hover {
+    color: #373f95;
+    background-color: white;
+}
+
+/* Dropdown Containers */
+.courses-btn-container, .more-btn-container, .quize-btn-container {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+/* Ensure the header is always visible and unaffected */
+.header {
+  position: relative;
+  z-index: 20; /* Keep it above the overlay */
+}
+
+/* Overlay that covers the page content but NOT the header */
+.overlay {
+  position: fixed;
+  top: 130px; /* Adjust based on your header height */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* Ensure it doesn't cover the header */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 10; /* Below the header but above the content */
+}
+
+/* Full-width dropdown menu */
+.dropdown-menu.full-width {
+  position: fixed;
+  top: 130px; /* Just below the header */
+  left: 0;
+  width: 100%;
+  background: white;
+  padding-left: 12%;
+  padding-top: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 11; /* Above the overlay */
+}
+
+/* Dropdown link styles */
+.dropdown-link {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-link:hover {
+  background: #f0f0f0;
+}
+
+
+/* Courses and More Buttons */
+.courses-btn, .more-btn, .quize-btn {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: transparent;
+    color: #373f95;
+    border: none;
+    padding: 8px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.courses-btn:hover, .more-btn:hover, .quize-btn:hover {
+    background-color:  #ecedf8;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    position: absolute;
+    padding-left: 0%;
+    top: 80%;
+    left:0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+    
+    z-index: 10;
+}
+
+.dropdown-link {
+    padding: 10px;
+    color: #373f95;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    background-color: #ffffff;
+    border: none;
+    text-align: start;
+}
+
+.dropdown-link:hover {
+    background-color: #ecedf8;
+}
+
+/* Show Dropdown on Hover */
+.courses-btn-container:hover .dropdown-menu, 
+.more-btn-container:hover .dropdown-menu {
+    display: flex;
+}
+
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px;
+    color: #1c204c;
+    padding-bottom: 15px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: space-around;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+    .logo-container {
+        flex-direction:row;
+    }
+
+    .left-side {
+        flex-direction: column;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: fit-content;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .right-side.open {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 350px;
+    }
+
+    .courses-btn-container, .more-btn-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+/* Default (light theme) */
+
+  
+
+  
+  /* Form container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 500px;
+  }
+  
+  /* Light mode text color */
+  h2, label {
+    color: rgb(17, 66, 66);
+  }
+  
+  /* Input fields */
+  input {
+    height: 35px;
+    width: 90%;
+    border: 2px solid #e6f2ff;
+    box-shadow: 2px 2px 4px 2px rgba(132, 136, 136, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .user-type-dropdown{
+    width: 90%;
+    padding: 5px;
+    margin-top: 20px;
+    border: 2px solid #e6f2ff;
+    box-shadow: 2px 2px 4px 2px rgba(132, 136, 136, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .user-type-dropdown:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #1c204c;
+  }
+
+  .user-type-dropdown option {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #1c204c;
+    border-radius: 5px;
+  }
+
+  .user-type-dropdown option:hover {
+    background-color: #1c204c;
+    color: #ffffff;
+  }
+  
+  .user-type-dropdown::-ms-expand {
+    display: none; /* Removes the dropdown arrow for IE */
+  }
+  input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #1c204c;
+  
+  }
+  /* Modal Overlay (Background) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: 30pxpp;
+    width: 500px;
+    max-width: 80%;
+    padding: 150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 147px;
+    right: 155px;
+    font-weight: bolder;
+    background: none !important;
+    border: none !important;
+    color: #000000 !important;
+    
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Login Button */
+  .logIn-submit-btn {
+    width: 90%;
+    height: fit-content;
+    background-color: #1c204c;
+    color: #ffffff;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px 20px;
+    border: 2px solid #1c204c;
+    transition: background-color 0.3s ease;
+  }
+
+  .logIn-submit-btn:hover {
+    background-color: #ffffff;
+    color: #1c204c;
+  }
+  
+  /* Button */
+  
+  /* Theme switch button */
+  .them-btn {
+    height: 70px;
+    width: 70px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ======== DARK THEME ======== */
+  .dark-theme, .dark-theme body, .dark-theme html {
+    background-color: #1c204c !important;
+    color: white;
+  }
+  
+  
+  .dark-theme .outer-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dark-theme .container {
+    background-color: #222;
+    box-shadow: inset 3px 3px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-theme h2,
+  .dark-theme label {
+    color: white !important;
+  }
+  
+  .dark-theme input {
+    border: 2px solid white;
+    background-color: #333;
+    color: white;
+  }
+  
+  .dark-theme input:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #e6f2ff;
+  }
+  
+  .dark-theme button {
+    background-color: #e6f2ff;
+    color: black;
+  }
+  
+  .dark-theme button:hover {
+    background-color: #e6f2ff;
+  }
+  
+  .dark-theme .them-btn {
+    background-color: #e6f2ff !important;
+    color: black;
+  }
+  
+  
+  .dark-theme h2 {
+    color: #e6f2ff;
+  }
+  
+  .link {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .dark-theme .link {
+    color: #e6f2ff; /* Light blue or white for dark mode */
+  }
+  
+  

@@ -1,0 +1,89 @@
+{
+    "qBank": [
+      {
+        "id": 1,
+        "question": "What is the sum of the first 10 natural numbers?",
+        "options": ["55", "45", "60", "50"],
+        "answer": "55",
+        "marks": 2
+      },
+      {
+        "id": 2,
+        "question": "If a train travels 60 miles per hour, how far will it travel in 2 hours?",
+        "options": ["120 miles", "100 miles", "150 miles", "110 miles"],
+        "answer": "120 miles",
+        "marks": 3
+      },
+      {
+        "id": 3,
+        "question": "What is 25% of 200?",
+        "options": ["50", "60", "40", "30"],
+        "answer": "50",
+        "marks": 2
+      },
+      {
+        "id": 4,
+        "question": "If a number is divisible by both 3 and 5, what will be its divisibility?",
+        "options": ["Divisible by 15", "Divisible by 30", "Divisible by 5", "Divisible by 6"],
+        "answer": "Divisible by 15",
+        "marks": 2
+      },
+      {
+        "id": 5,
+        "question": "The average of 5 numbers is 15. What is the sum of the numbers?",
+        "options": ["75", "80", "85", "90"],
+        "answer": "75",
+        "marks": 3
+      },
+      {
+        "id": 6,
+        "question": "A car travels 180 miles in 3 hours. What is the speed of the car?",
+        "options": ["60 mph", "50 mph", "55 mph", "65 mph"],
+        "answer": "60 mph",
+        "marks": 2
+      },
+      {
+        "id": 7,
+        "question": "If a rectangle has a length of 12 cm and a width of 5 cm, what is its area?",
+        "options": ["60 cm²", "50 cm²", "55 cm²", "65 cm²"],
+        "answer": "60 cm²",
+        "marks": 2
+      },
+      {
+        "id": 8,
+        "question": "What is the value of x in the equation 2x + 4 = 10?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "3",
+        "marks": 2
+      },
+      {
+        "id": 9,
+        "question": "If a person buys an item for $50 and sells it for $60, what is the profit percentage?",
+        "options": ["10%", "20%", "30%", "40%"],
+        "answer": "20%",
+        "marks": 3
+      },
+      {
+        "id": 10,
+        "question": "A man completes a job in 5 days. How many days will 4 men take to complete the same job?",
+        "options": ["2", "4", "6", "5"],
+        "answer": "1.25 days",
+        "marks": 3
+      },
+      {
+        "id": 11,
+        "question": "If a sum of money doubles in 4 years, what is the rate of interest per annum?",
+        "options": ["10%", "12%", "15%", "20%"],
+        "answer": "18%",
+        "marks": 2
+      },
+      {
+        "id": 12,
+        "question": "The sum of two numbers is 48. If one of them is 20, what is the other number?",
+        "options": ["28", "18", "30", "25"],
+        "answer": "28",
+        "marks": 2
+      }
+    ]
+  }
+  

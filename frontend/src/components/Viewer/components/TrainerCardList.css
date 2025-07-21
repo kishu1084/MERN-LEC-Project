@@ -1,0 +1,42 @@
+.text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .custom-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .heading-text {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .line-wrapper {
+    position: relative;
+    width: 100%;
+    height: 3px;
+  }
+  
+  .gray-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #e0e0e0;
+  }
+  
+  .red-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 60px; /* Adjust length of red line */
+    background-color: red;
+  }
+  

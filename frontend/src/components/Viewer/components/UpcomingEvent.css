@@ -1,0 +1,31 @@
+.event-slider {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.event-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.event-navigation{
+    top: 50%;
+    align-content: center;
+}
+
+/* Add to your CSS file */
+.event-slide .col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-slide .col > .card {
+    flex-grow: 1;
+}

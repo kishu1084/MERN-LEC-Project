@@ -1,0 +1,55 @@
+/* Stepper Container */
+.stepper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Step Circle */
+  .step-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Inner Circle (for active step) */
+  .step-circle.active {
+    border-color: green;
+  }
+  
+  .step-circle .inner-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .step-circle.active .inner-circle {
+    background-color: green;
+  }
+  
+  /* Step Line */
+  .step-line {
+    height: 4px;
+    background-color: #ccc;
+    width: 100%;
+    position: relative;
+    top: -16px; /* Align with step circles */
+    z-index: 1;
+    
+  }
+  
+  .step-line.active {
+    background-color: green;
+  }
+  

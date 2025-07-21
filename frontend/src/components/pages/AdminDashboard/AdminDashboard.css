@@ -1,0 +1,22 @@
+.custom-accordion .accordion-button {
+    background-color: #212529 !important; /* bg-dark */
+    color: white !important;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: none;
+  }
+  
+  .custom-accordion .accordion-button:not(.collapsed) {
+    background-color: white !important;
+    color: black !important;
+    border-bottom: none;
+  }
+  
+  .custom-accordion .accordion-body {
+    background-color: white;
+  }
+  
+  .sidebar {
+    min-height: 980px;
+  }
+  
