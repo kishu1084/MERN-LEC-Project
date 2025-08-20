@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://patelkrishna01062003:123@cluster0.iqpyq.mongodb.net/coursesdb?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('connection link of mongodb')
     .then(() => {
         console.log('MongoDB connected');
     })
